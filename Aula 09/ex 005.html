@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM parte 1</title>
+    <style>
+      body {
+        background-color: aquamarine;
+        font: normal 20pt Arial;
+      }
+    </style>
+  </head>
+  <body id="corpo">
+    <h1>Site maravilhoso</h1>
+    <p>Texto profundo e bem escrito</p>
+    <p id="parForte">Segundo parágrafo <strong>incrível</strong></p>
+    <script>
+      var corpo = window.document.getElementById("corpo");
+      var p1 = window.document.getElementsByTagName("p")[1];
+      var p2 = window.document.getElementsById("parForte")[1];
+      p1.innerText = "Mudado por JS";
+      corpo.innerText = p2;
+    </script>
+  </body>
+</html>
