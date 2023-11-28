@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DETRAN</title>
+    <style>
+      p#inline{
+        display: inline-block;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Sistema de multas</h1>
+    <p id="inline">velocidade do carro:</p>
+    <input type="number" name="txtvel" id="txtvel"/>
+    <p id="inline">km/h</p>
+    <input type="button" value="Verificar" onclick="calcular()" />
+    <div id="resposta"></div>
+    <script>
+      function calcular() {
+        var txtvel = Number(document.querySelector("input#txtvel").value);
+        var res = document.querySelector("div#resposta");
+        res.innerHTML = `<p>sua velocidade atual é de <strong>${txtvel}Km/h</strong></p>`;
+        if (txtvel > 60) {
+          res.innerHTML += `Você estava a ${txtvel}Km/h em uma via de 60Km/h, você foi multado!`;
+        }
+        res.innerHTML += `<p>Dirija sempre com cinto de segurança!</p>`;
+        console.log("javascript desgraçado!");
+      }
+    </script>
+  </body>
+</html>
