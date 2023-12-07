@@ -3,8 +3,10 @@ function carreguar() {
   var div1 = document.getElementById("primeira");
   var img = document.querySelector("img");
   
-  hora = data.getHours();
-  div1.innerHTML = `<p>Agora são ${hora} horas</p>`;
+  var hora = data.getHours();
+  var minutos = data.getMinutes();
+
+  div1.innerHTML = `<p>Agora são ${hora}:${minutos} horas</p>`;
 
   if (hora < 5 && hora >= 0) {
     img.src = "imagens/madrugada.jpg";
